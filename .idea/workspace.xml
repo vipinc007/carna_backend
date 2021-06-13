@@ -21,7 +21,14 @@
   <component name="ChangeListManager">
     <list default="true" id="c160cdef-35ff-4c87-922d-d52791c91add" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataManager/userManager.py" beforeDir="false" afterPath="$PROJECT_DIR$/DataManager/userManager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataStore/Data/Users.data" beforeDir="false" afterPath="$PROJECT_DIR$/DataStore/Data/Users.data" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataStore/storeKeeper.py" beforeDir="false" afterPath="$PROJECT_DIR$/DataStore/storeKeeper.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ListOfObjects" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_manager.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/object_manager.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/cases/test_object_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/cases/test_object_manager.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,8 +128,47 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="run" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Src" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tests/run.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests for test_object_manager.PdwUtilsTest.test_create" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="Src" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests/cases" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_object_manager.PdwUtilsTest.test_create&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.run" />
+        <item itemvalue="Python tests.Unittests for test_object_manager.PdwUtilsTest.test_create" />
         <item itemvalue="Python.app" />
       </list>
     </recent_temporary>
@@ -141,8 +187,17 @@
       <workItem from="1623484954589" duration="32000" />
       <workItem from="1623484997811" duration="99000" />
       <workItem from="1623485105186" duration="4910000" />
-      <workItem from="1623505277979" duration="2810000" />
+      <workItem from="1623505277979" duration="2972000" />
+      <workItem from="1623588653529" duration="4194000" />
     </task>
+    <task id="LOCAL-00001" summary="added user management">
+      <created>1623511228453</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1623511228453</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -160,30 +215,54 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="added user management" />
+    <option name="LAST_COMMIT_MESSAGE" value="added user management" />
+  </component>
   <component name="WindowStateProjectService">
-    <state width="1237" height="163" key="GridCell.Tab.0.bottom" timestamp="1623510641798">
+    <state x="371" y="86" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1623589086113">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="163" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1623510641798" />
-    <state width="1237" height="163" key="GridCell.Tab.0.center" timestamp="1623510641798">
+    <state x="371" y="86" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.680@0.0.1280.680" timestamp="1623589086113" />
+    <state width="1237" height="163" key="GridCell.Tab.0.bottom" timestamp="1623592823564">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="163" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1623510641798" />
-    <state width="1237" height="163" key="GridCell.Tab.0.left" timestamp="1623510641798">
+    <state width="1237" height="163" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1623592823564" />
+    <state width="1237" height="163" key="GridCell.Tab.0.center" timestamp="1623592823564">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="163" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1623510641798" />
-    <state width="1237" height="163" key="GridCell.Tab.0.right" timestamp="1623510641798">
+    <state width="1237" height="163" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1623592823564" />
+    <state width="1237" height="163" key="GridCell.Tab.0.left" timestamp="1623592823564">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="163" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1623510641798" />
+    <state width="1237" height="163" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1623592823564" />
+    <state width="1237" height="163" key="GridCell.Tab.0.right" timestamp="1623592823564">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="163" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1623592823564" />
     <state x="142" y="0" key="SettingsEditor" timestamp="1623484980741">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1623484980741" />
+    <state x="233" y="59" key="Vcs.Push.Dialog.v2" timestamp="1623511234427">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="233" y="59" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1623511234427" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/DataStore/storeKeeper.py</url>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Src$Src.coverage" NAME="Src Coverage Results" MODIFIED="1623510641788" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/Src$Src.coverage" NAME="Src Coverage Results" MODIFIED="1623592823555" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/Src$run.coverage" NAME="run Coverage Results" MODIFIED="1623591189046" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/Src$app.coverage" NAME="app Coverage Results" MODIFIED="1623422123176" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Src$Unittests_for_test_object_manager_PdwUtilsTest_test_create.coverage" NAME="Unittests for test_object_manager.PdwUtilsTest.test_create Coverage Results" MODIFIED="1623590687924" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests/cases" />
   </component>
 </project>

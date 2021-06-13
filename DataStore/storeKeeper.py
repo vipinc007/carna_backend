@@ -24,3 +24,7 @@ class store_keeper():
         new_data = pickle.load(file)
         file.close()
         return new_data
+
+    def delete_data_file(self):
+        if os.path.exists(self.fpath):
+            os.remove(self.fpath)

@@ -8,15 +8,15 @@ class user_manager():
 
     def __init__(self, table_name="Users.data"):
         self.data_file_name = table_name
+        self.store_keeper = store_keeper(self.data_file_name)
 
     def create(self,user_json):
         data_validation = self.__data_validation__(user_json)
         if data_validation is not None:
             return data_validation
 
-        dm = store_keeper(self.data_file_name)
-        values = dm.unpickle_data()
-        if any(d.get('email', "") == user_json["email"] for d in values):
+        values = self.store_keeper.unpickle_data()
+        if any(d.get('email', "").strip() == user_json["email"].strip() for d in values):
             return {"done": False, "message": "Email already exists"}
 
         nextid =1
@@ -25,14 +25,12 @@ class user_manager():
             nextid = nextid+1
         user_json["id"] = nextid
         values.append(user_json)
-        dm.pickle_data(values)
+        self.store_keeper.pickle_data(values)
 
         return {"done":True,"message":"created","id":nextid}
 
     def edit(self,id,user_json):
-        dm = store_keeper(self.data_file_name)
-        values = dm.unpickle_data()
-
+        values = self.store_keeper.unpickle_data()
         if not any(int(d["id"])==int(id) for d in values):
             return {"done": False, "message": "Record does not exist"}
 
@@ -40,7 +38,7 @@ class user_manager():
         if data_validation is not None:
             return data_validation
 
-        if any(d.get('email', "") == user_json["email"] and int(d.get('id', ""))!=int(id) for d in values):
+        if any(d.get('email', "").strip() == user_json["email"].strip() and int(d.get('id', ""))!=int(id) for d in values):
             return {"done": False, "message": "Email already exists"}
 
         rindex=0
@@ -51,34 +49,43 @@ class user_manager():
         values[rindex]["email"]=user_json["email"]
         values[rindex]["name"] = user_json["name"]
         values[rindex]["country"] = user_json["country"]
-        dm.pickle_data(values)
+        self.store_keeper.pickle_data(values)
 
         return {"done":True,"message":"updated"}
 
 
     def reset(self):
-        dm = store_keeper(self.data_file_name)
-        dm.pickle_data([])
+        self.store_keeper.pickle_data([])
         return True
 
     def get(self,id):
-        dm = store_keeper(self.data_file_name)
-        values = dm.unpickle_data()
+        values = self.store_keeper.unpickle_data()
         if not any(int(d["id"]) == int(id) for d in values):
             return {"done": False, "message": "Record does not exist"}
         record = [r for r in values if int(r['id']) == int(id)][0]
 
         return {"done":True,"message":"fetched","data":record}
 
+    def delete(self,id):
+        values = self.store_keeper.unpickle_data()
+        if not any(int(d["id"]) == int(id) for d in values):
+            return {"done": False, "message": "Record does not exist"}
+        rindex = -1
+        for idx, r in enumerate(values):
+            if int(r['id']) == int(id):
+                rindex = idx
+                break
+        values.pop(rindex)
+        self.store_keeper.pickle_data(values)
+        return {"done":True,"message":"deleted"}
+
     def list(self):
-        dm = store_keeper(self.data_file_name)
-        values = dm.unpickle_data()
-        return values
+        values = self.store_keeper.unpickle_data()
+        return {"done":True,"message":"fetched","data":values}
 
 
     def delete_data_file(self):
-        if os.path.exists(self.data_file_name):
-            os.remove(self.data_file_name)
+        self.store_keeper.delete_data_file()
 
 
     def __data_validation__(self,data):
